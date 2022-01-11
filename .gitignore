@@ -1,5 +1,6 @@
-# Created by https://www.toptal.com/developers/gitignore/api/macos,git,visualstudiocode,nextjs,sass
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,git,visualstudiocode,nextjs,sass
+
+# Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,nextjs,react,git
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode,nextjs,react,git
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -49,11 +50,21 @@ Temporary Items
 # Next build dir
 .next/
 
-### Sass ###
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
 
 ### VisualStudioCode ###
 .vscode/*
@@ -76,4 +87,4 @@ Temporary Items
 
 # Support for Project snippet scope
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,git,visualstudiocode,nextjs,sass
+# End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,nextjs,react,git
