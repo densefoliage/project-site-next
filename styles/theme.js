@@ -6,7 +6,7 @@ let theme = createTheme({
     fontFamily: [
       'Atkinson Hyperlegible', 
       'sans-serif'
-    ].join(',')
+    ].join(','),
   },
   palette: {
     mode: 'dark',

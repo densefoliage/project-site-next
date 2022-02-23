@@ -1,0 +1,7 @@
+- name: Maple Farm Rewilding Project
+  verbose: Maple Farm, Surrey, England
+  id: mapleFarm
+
+- name: Central Saint Martins
+  verbose: Central Saint Martins, London, England
+  id: csm

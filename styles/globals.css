@@ -1,3 +1,15 @@
 .active {
   opacity: 1;
 }
+
+em {
+  /* color: slategray; */
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  text-align: left;
+}

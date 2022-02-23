@@ -10,11 +10,16 @@ import Layout from '@components/Layout';
 import "/styles/globals.css";
 import theme from '../styles/theme';
 
+export const navLinks = [
+  { title: `projects`, path: `/` },
+  { title: `about`, path: `/about` },
+  { title: `contact`, path: `/contact` }
+];
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
-export default function MyApp(props) {
+function App(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   return (
@@ -26,10 +31,12 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Layout>
+        <Layout navLinks={navLinks}>
           <Component {...pageProps} />
         </Layout>
       </ThemeProvider>
     </CacheProvider>
   );
 }
+
+export default App;

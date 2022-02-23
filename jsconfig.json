@@ -4,9 +4,10 @@
         "paths": {
             "@components/*": ["src/components/*"],
             "@specialComponents/*": ["src/specialComponents/*"],
-            "@project/*": ["_project/*"],
-            "@blog/*": ["_blog/*"],
-            "@api": ["pages/api/index"]
+            "@utils/*": ["src/utils/*"],
+            "@content/*": ["_content/*"],
+            "@config/*": ["_config/*"],
+            "@api/*": ["pages/api/*"]
         }
     }
 }

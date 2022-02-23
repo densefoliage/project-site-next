@@ -4,8 +4,6 @@ import { useRouter } from "next/router";
 
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
-import ParkIcon from '@mui/icons-material/Park';
-import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 
@@ -14,14 +12,10 @@ const NavigationBar = ({ navLinks }) => {
 
   const getIcon = (title) => {
     switch (title.toLowerCase()) {
-      case "home":
+      case "projects":
         return (<HomeIcon />);
       case "about":
         return (<InfoIcon />);
-      case "project":
-        return (<ParkIcon />);
-      case "blog":
-        return (<TextSnippetIcon />);
       case "contact":
         return (<EmojiEmotionsIcon />);
       default:

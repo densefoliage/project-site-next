@@ -1,0 +1,17 @@
+- page: home
+  url:  /
+
+- page: about
+  url:  /about
+
+- page: manifestos
+  url:  /manifestos
+
+- page: writing
+  url:  /writing
+
+- page: research
+  url:  /research
+
+- page: contact
+  url:  /contact

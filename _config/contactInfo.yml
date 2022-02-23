@@ -1,0 +1,10 @@
+title: Contact us
+body: [
+  "For questions, enquires and opportunities please get in touch with us."
+]
+methods: [
+    {
+      type: email,
+      address: hello@joerevans.com
+    }
+]
