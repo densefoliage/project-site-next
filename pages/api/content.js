@@ -2,6 +2,8 @@ import matter from 'gray-matter'
 import { marked } from 'marked';
 import yaml from 'js-yaml'
 
+var frontMatterRegex = /---(.|\n)*---/;
+
 export async function getAllContent() {
     const context = require.context('../../_content', true, /^\.\/.*\.(md|mdx)$/)
 
@@ -34,14 +36,14 @@ export async function getContentBySlug(slug) {
         filtered.map(async ({path}) => {
             const file = await import(`../../_content/${path}`);
             const meta = matter(file.default);
-            const source = marked(meta.content);
-            // const source = file.default;
+            const source = meta.content;
+            // const source = marked(meta.content); // pre-parsing, not good!
             return {
                 frontMatter: {
                     ...meta.data,
                     datePublished: meta.data.datePublished.toDateString(),
                 },
-                source: source
+                source
               }
         })
     );

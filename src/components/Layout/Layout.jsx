@@ -1,9 +1,8 @@
 import React from "react";
 import Head from 'next/head'
 
-import { styled } from "@mui/system";
+import { Box, styled } from "@mui/system";
 import { Fab } from "@mui/material";
-import { Container } from "@mui/material";
 
 import KeyboardArrowUp from "@mui/icons-material/KeyboardArrowUp";
 
@@ -22,10 +21,14 @@ const Layout = ({ title, description, navLinks, children }) => {
       </Head>
       <div id="back-to-top-anchor" />
       <MiniDrawer navLinks={navLinks}>
-        <Container maxWidth="md">
+        <Box
+          sx={{
+            mx: "auto" 
+          }}
+        >
             {children}
-          <Footer />
-        </Container>
+        </Box>
+        <Footer />
       </MiniDrawer>
       <BackToTop>
         <Fab size="large" aria-label="back to top">

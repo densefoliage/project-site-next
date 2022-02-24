@@ -1,7 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
-
-const components = {};
+import { Box, Container, Typography } from "@mui/material";
 
 const ManifestoLayout = ({ content, renderMDX }) => {
 
@@ -16,16 +14,13 @@ const ManifestoLayout = ({ content, renderMDX }) => {
 
   return (
     <>
-      <div>
         { content.map( (chapter, i) => {
           return (
             <Box key={i}>
-              {console.log(chapter)}
               { renderChapter( chapter ) }
             </Box>
           )
         })}
-      </div>
     </>
   )
 };
@@ -36,9 +31,10 @@ const ABFormat = ({ chapter, renderMDX }) => {
     <Box 
       sx={{ 
         border: 1,
-        borderRadius: 8,
+        borderRadius: 6,
         p: 4,
-        maxWidth: 'sm'
+        maxWidth: 490,
+        mx: "auto"
       }} 
     >
       { renderMDX(mdxSource) }
@@ -47,8 +43,8 @@ const ABFormat = ({ chapter, renderMDX }) => {
           sx={{ 
             fontSize: "body1.fontSize", 
             fontWeight: "bold",
-            mt: 4,
-            mb: 2,
+            mt: 3,
+            mb: 1.5,
           }}
         >
           { frontMatter.title }
@@ -57,7 +53,7 @@ const ABFormat = ({ chapter, renderMDX }) => {
       <Typography 
         sx={{ 
           textTransform: "lowercase",
-          mb: 2,
+          mb: 1.5,
         }} 
       >
         by { frontMatter.authors }
@@ -69,20 +65,10 @@ const ABFormat = ({ chapter, renderMDX }) => {
 
 const OtherFormat = ({ chapter, renderMDX }) => {
   return (
-    <Box>
+    <>
       { renderMDX(chapter.mdxSource) }
-    </Box>
+    </>
   );
-}
-
-const SmallH1 = (props) => {
-  return (
-    <Typography {...props} variant="h1">
-      <Box sx={{ fontSize: "body1.fontSize", fontWeight: "bold" }}>
-        {props.children}
-      </Box>
-    </Typography>
-  )
 }
 
 export default ManifestoLayout;

@@ -7,6 +7,14 @@ let theme = createTheme({
       'Atkinson Hyperlegible', 
       'sans-serif'
     ].join(','),
+    h1: {
+      fontSize: '3rem',
+      lineHeight: 2
+    },
+    h2: {
+      fontSize: '1.5rem',
+      lineHeight: 1.5,
+    }
   },
   palette: {
     mode: 'dark',
