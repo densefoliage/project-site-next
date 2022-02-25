@@ -17,7 +17,8 @@ import ResearchLayout from "@components/ResearchLayout";
 import PhysicalLayout from "@components/PhysicalLayout";
 import DigitalLayout from "@components/DigitalLayout";
 import OtherLayout from "@components/OtherLayout";
-import { typography } from "@mui/system";
+import InterviewSpeaker from "@components/InterviewSpeaker";
+import StageDirection from "@components/StageDirection";
 
 const components = {
   th: (props) => (
@@ -34,7 +35,9 @@ const components = {
         </Box>
       </Typography>
     </th>
-  )
+  ),
+  InterviewSpeaker,
+  StageDirection
 };
 
 const ProjectPage = ({ content }) => {

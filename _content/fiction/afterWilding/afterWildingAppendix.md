@@ -1,6 +1,6 @@
 ---
 title:  "After Wilding, 2042"
-subtitle: "Appendix Before the Wilds"
+subtitle: "Before the Wilds"
 section: "appendix"
 chapter: 99
 

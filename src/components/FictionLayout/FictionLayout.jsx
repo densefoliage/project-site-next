@@ -3,8 +3,8 @@ import React from "react";
 
 const FictionLayout = ({ content, renderMDX }) => {
 
-  const renderChapter = ( chapter ) => {
-    return < OtherFormat chapter={chapter} renderMDX={renderMDX} />
+  const renderChapter = ( chapter, i ) => {
+    return < OtherFormat chapter={chapter} renderMDX={renderMDX} i={i} />
     switch (chapter.frontMatter.format) {
       // case "a/b":
         // return < ABFormat chapter={chapter} renderMDX={renderMDX} />
@@ -19,7 +19,7 @@ const FictionLayout = ({ content, renderMDX }) => {
         { content.map( (chapter, i) => {
           return (
             <Box key={i}>
-              { renderChapter( chapter ) }
+              { renderChapter( chapter, i ) }
             </Box>
           )
         })}
@@ -27,15 +27,24 @@ const FictionLayout = ({ content, renderMDX }) => {
   )
 };
 
-const OtherFormat = ({ chapter, renderMDX }) => {
+const OtherFormat = ({ chapter, renderMDX, i }) => {
   const { frontMatter, mdxSource } = chapter;
   return (
     <>
-    <Typography variant="h2">{ frontMatter.subtitle }</Typography>
+    <Box 
+      sx={{ 
+        maxWidth: "md",
+        mx: "auto"
+      }} 
+    >
+    <Typography variant="h2">
+      { frontMatter.section == "main" ? `Chapter ${i}` : "Appendix" }: { frontMatter.subtitle }
+    </Typography>
     { renderMDX(mdxSource) }
     <br/>
     <hr/>
     <br/>
+    </Box>
     </>
   );
 }
