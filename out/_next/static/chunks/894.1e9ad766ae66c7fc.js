@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[894],{5894:function(n,e,a){a.r(e),e.default="- name: Maple Farm Rewilding Project\n  verbose: Maple Farm, Surrey, England\n  id: mapleFarm\n\n- name: Central Saint Martins\n  verbose: Central Saint Martins, London, England\n  id: csm"}}]);

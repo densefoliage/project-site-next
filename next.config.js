@@ -7,4 +7,8 @@ module.exports = {
     return config
   },
   trailingSlash: true,
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
 }

@@ -13,16 +13,20 @@
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.0.0-rc.1",
+    "@mui/lab": "^5.0.0-alpha.73",
     "@mui/material": "^5.0.0-rc.1",
     "clsx": "^1.1.1",
     "marked": "^4.0.9",
     "next": "12.0.7",
     "next-mdx-remote": "^3.0.8",
+    "next-optimized-images": "^2.6.2",
+    "plaiceholder": "^2.3.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "rehype-react": "^7.0.4",
     "remark-gfm": "^3.0.1",
-    "remark-rehype": "^10.1.0"
+    "remark-rehype": "^10.1.0",
+    "sharp": "^0.30.6"
   },
   "devDependencies": {
     "eslint": "8.6.0",

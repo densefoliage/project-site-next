@@ -10,28 +10,24 @@ const StageDirection = ({ children }) => {
     <Box
       component="p"
       sx={{
-        my: spacingFactor * 2
+        my: spacingFactor * 4,
+        display: "flex",
       }}
     >
-    <Grid container spacing={2}>
-        <Grid item xs={3} />
-        <Grid item xs={9}>
           <Box
             sx={{
+              display: "inline-block",
               fontStyle: "italic",
-              textAlign: "center",
+              textAlign: "justify",
               lineHeight: 1.5,
-              width: 0.5,
+              maxWidth: 0.5,
               mx: 'auto'
-              // pl: spacingFactor * 8
             }}
           >
           { addBrackets ? "(" : ""}
           { children }
           { addBrackets ? ")" : ""}
           </Box>
-        </Grid>
-      </Grid>
     </Box>
     </>
     );

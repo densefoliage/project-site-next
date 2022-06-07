@@ -1,70 +1,59 @@
-import { Grid, Box, Typography } from "@mui/material";
-import { styled } from "@mui/system";
+import { Grid, Box, Typography, Avatar, Container } from "@mui/material";
 import { fontWeight } from "@mui/system";
 import React from "react"
 
 const spacingFactor = 2;
 
-const SpeechBubbleDiv = styled('div')(({ theme }) => ({
-  // // width: "300px",
-  // // margin: "50px auto",
-  // border: "3px solid white",
-  // borderRadius: "10px",
-  // // padding: "20px",
-  // // textAlign: "center",
-  // fontWeight: "900",
-  // // color: "#00bfb6",
-  position: "relative",
-  '&::before': {
-    content: '""',
-    width: "0px",
-    height: "0px",
-    position: "absolute",
-    borderLeft: "10px solid transparent",
-    borderRight: "10px solid white",
-    borderTop: "10px solid transparent",
-    borderBottom: "10px solid transparent",
-    right: "100%",
-    top: "17px",
-    // transform: 'rotate(45deg)',
-  }
-}))
-
 const InterviewSpeaker = ({speaker, children}) => {
+  const alignment = speaker != "The Researcher" ? "left" : "right";
+
   return (
   <>
   <Box
     component="p"
     sx={{
-      my: spacingFactor * 2
+      my: spacingFactor*2
     }}
   >
-  <Grid container spacing={2}>
-      <Grid item xs={3}>
-        <Typography 
-          sx={{ 
-            textAlign: "right",
-            fontWeight: "bold" ,
-            py: spacingFactor
-          }}
-        >
-          { speaker }:
-        </Typography>
-      </Grid>
-      <Grid item xs={9}>
-        <SpeechBubbleDiv
-          sx={{
-            display: 'inline-block',
-            border: 1,
-            borderRadius: spacingFactor * 2,
-            p: spacingFactor,
-            lineHeight: 1.75
-          }}
-        >
-        { children }
-        </SpeechBubbleDiv>
-      </Grid>
-    </Grid>
+    <Box
+    sx={{
+      display: "flex",
+      alignItems: "center",
+      flexDirection: alignment == "left" ? "row" : "row-reverse"
+    }}
+    >
+    <Typography
+      sx={{ 
+        textAlign: "right",
+        fontWeight: "bold" ,
+      }}
+    >
+      { speaker }
+    </Typography>
+    </Box>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: alignment == "left" ? "row" : "row-reverse"
+      }}
+    >
+      <Box
+            sx={{
+              display: 'inline-block',
+              textAlign: "justify",
+              border: 1,
+              p: spacingFactor,
+              my: spacingFactor/2,
+              lineHeight: 1.75,
+              borderRadius: alignment == "left" ?
+                theme => `0 ${theme.spacing(spacingFactor)} ${theme.spacing(spacingFactor)} ${theme.spacing(spacingFactor)}` :
+                theme => `${theme.spacing(spacingFactor)} 0 ${theme.spacing(spacingFactor)} ${theme.spacing(spacingFactor)}`
+            }}
+          >
+          { children }
+        </Box>
+    </Box>
   </Box>
   </>
   );

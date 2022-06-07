@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[436],{1436:function(n,e,c){c.r(e),e.default="- page: home\n  url:  /\n\n- page: contact\n  url:  /contact"}}]);

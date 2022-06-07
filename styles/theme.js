@@ -3,6 +3,7 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 // Create a theme instance.
 let theme = createTheme({
   typography: {
+    fontSize: 16,
     fontFamily: [
       'Atkinson Hyperlegible', 
       'sans-serif'

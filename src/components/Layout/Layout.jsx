@@ -20,21 +20,17 @@ const Layout = ({ title, description, navLinks, children }) => {
         <meta name='description' content={description} />
       </Head>
       <div id="back-to-top-anchor" />
-      <MiniDrawer navLinks={navLinks}>
-        <Box
-          sx={{
-            mx: "auto" 
-          }}
-        >
+      {/* <MiniDrawer navLinks={navLinks}> */}
+        <Box>
             {children}
         </Box>
-        <Footer />
-      </MiniDrawer>
-      <BackToTop>
+        {/* <Footer /> */}
+      {/* </MiniDrawer> */}
+      {/* <BackToTop>
         <Fab size="large" aria-label="back to top">
           <KeyboardArrowUp />
         </Fab>
-      </BackToTop>
+      </BackToTop> */}
     </>
   );
 };

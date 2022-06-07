@@ -29,3 +29,8 @@ export async function getNavLinks() {
     const navLinks = await import("../../_config/navLinks.yml")
     return yaml.load(navLinks.default);
 }
+
+export async function getMenuLinks() {
+    const menuLinks = await import("../../_config/menuLinks.yml")
+    return yaml.load(menuLinks.default);
+}

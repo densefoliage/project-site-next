@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[909],{4909:function(e,n,s){s.r(n),n.default='title: Get in touch\nbody: [\n  "Hi, I\'m Joe. A designer/futures researcher currently living in London."\n]\nmethods: [\n    {\n      type: email,\n      address: hello@joerevans.com\n    }\n]'}}]);

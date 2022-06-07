@@ -4,6 +4,9 @@ import React from "react";
 const FictionLayout = ({ content, renderMDX }) => {
 
   const renderChapter = ( chapter, i ) => {
+    if (chapter.frontMatter.hide) {
+      return <></>
+    }
     return < OtherFormat chapter={chapter} renderMDX={renderMDX} i={i} />
     switch (chapter.frontMatter.format) {
       // case "a/b":
@@ -14,7 +17,12 @@ const FictionLayout = ({ content, renderMDX }) => {
   };
 
   return (
-    <>
+    <Box
+    sx={{ 
+      maxWidth: "sm",
+      mx: "auto"
+    }} 
+    >
         <Typography variant="h1">{ content[0].frontMatter.title }</Typography>
         { content.map( (chapter, i) => {
           return (
@@ -23,7 +31,7 @@ const FictionLayout = ({ content, renderMDX }) => {
             </Box>
           )
         })}
-    </>
+    </Box>
   )
 };
 
@@ -31,12 +39,7 @@ const OtherFormat = ({ chapter, renderMDX, i }) => {
   const { frontMatter, mdxSource } = chapter;
   return (
     <>
-    <Box 
-      sx={{ 
-        maxWidth: "md",
-        mx: "auto"
-      }} 
-    >
+    <Box>
     <Typography variant="h2">
       { frontMatter.section == "main" ? `Chapter ${i}` : "Appendix" }: { frontMatter.subtitle }
     </Typography>

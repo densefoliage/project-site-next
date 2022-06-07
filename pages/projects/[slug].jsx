@@ -36,8 +36,20 @@ const components = {
       </Typography>
     </th>
   ),
+  p: (props) => (
+    <Typography variant="p">
+      <Box
+        sx={{
+          textAlign: "justify",
+          marginTop: 2
+        }}
+      >
+        {props.children}
+      </Box>
+    </Typography>
+  ),
   InterviewSpeaker,
-  StageDirection
+  StageDirection,
 };
 
 const ProjectPage = ({ content }) => {

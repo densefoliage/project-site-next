@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5],{5:function(n,e,i){i.r(e),e.default="- fiction\n- manifesto\n- research\n- physical\n- digital"}}]);
