@@ -27,6 +27,7 @@ function App(props) {
       <Head>
         <title>MUI5 Nextjs</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

@@ -111,46 +111,7 @@ const Homepage = ({ siteInfo, menuLinks, places, content }) => {
             </Item>
           )
           )}
-          {/* { content.map( ({title, place, slug, extension}, i) => (
-          <Item key={i}>
-            <MuiNextLink activeClassName="active" href={`/projects/${slug}`}>
-            <Box
-              sx={{
-                color: "white"
-              }}
-            >
-              { title }
-            </Box>
-            </MuiNextLink>
-            </Item>
-          ) 
-        )} */}
         </Masonry>
-        {/* <div>Sort by: PLACE or METHOD</div>
-      <br/>
-      <div>
-        { content.map( ({title, place, slug, extension}, i) => (
-          <div key={i}>
-                            <MuiNextLink activeClassName="active" href={`/projects/${slug}`}>
-            <div>
-              <b>Title: </b>{ title }
-            </div>
-            <div>
-              <b>Extension: </b>{ extension }
-            </div>
-            <div>
-              <b>Place:</b> { place } 
-            </div>
-            <br/>
-            </MuiNextLink>
-            </div>
-          ) 
-        )}
-      </div>
-      <h2>Places</h2>
-      <div>
-        { places.map( ({name, id}) => <li key={id}>{ name }</li> )}
-      </div> */}
       </Box>
     </>
   )

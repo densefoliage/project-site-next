@@ -19,10 +19,13 @@ let theme = createTheme({
   },
   palette: {
     mode: 'dark',
+    primary: {
+      main: '#141419'
+    },
     background: {
       default: '#141419',
       paper: '#141419'
-    }
+    },
   }
 });
 
